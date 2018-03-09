@@ -117,7 +117,7 @@ class PlaneGame(object):
                             #再次点击鼠标停止显示帮助信息
                             for keydown in pygame.event.get():
                                 if keydown.type == pygame.MOUSEBUTTONDOWN:
-                                    show = False
+                                    show_help = False
                     if event.button == 1 and button7_rect.collidepoint(event.pos):
                         button_sound.play()
                         time.sleep(1)
