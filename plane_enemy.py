@@ -4,7 +4,7 @@ from random import randint
 class Enemy(GameSpirte):
     """敌方精灵"""
 
-    def __init__(self,image_name = "images/images/enemies/e1_1.png",speed = [0,2] ):
+    def __init__(self,image_name = "images/enemies/e1_1.png",speed = [0,2] ):
 
         #1.调用父类初始函数
         super().__init__(image_name,speed)
@@ -30,6 +30,7 @@ class Enemy(GameSpirte):
         self.speed = [0,104//self.enemy_size]
         #设置敌机血量
         self.energy =  self.enemy_size
+        # 敌机实时血量
         self.real_time_energy = self.energy
         #设置mask属性用于碰撞检测
         self.mask = pygame.mask.from_surface(self.image)
@@ -45,26 +46,26 @@ class Enemy(GameSpirte):
     def load_images(self):
         self.e_images = []
         self.e_images.extend([ \
-            pygame.image.load("images/images/enemies/e1_1.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e1_2.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e1_3.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e1_4.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e1_5.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e2_1.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e2_2.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e2_3.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e2_4.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e2_5.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e3_1.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e3_2.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e3_3.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e3_4.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e3_5.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e4_1.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e4_2.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e4_3.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e4_4.png").convert_alpha(), \
-            pygame.image.load("images/images/enemies/e4_5.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e1_1.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e1_2.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e1_3.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e1_4.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e1_5.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e2_1.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e2_2.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e2_3.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e2_4.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e2_5.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e3_1.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e3_2.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e3_3.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e3_4.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e3_5.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e4_1.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e4_2.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e4_3.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e4_4.png").convert_alpha(), \
+            pygame.image.load("images/enemies/e4_5.png").convert_alpha(), \
             ])
 
 

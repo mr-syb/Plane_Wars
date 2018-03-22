@@ -3,7 +3,7 @@ from plane_sprites import*
 class Explosion(GameSpirte):
     def __init__(self, center, size):
         #调用父类初始化函数
-        super().__init__("images/images/explode/ex0.png")
+        super().__init__("images/explode/ex0.png")
         # 爆炸精灵动画字典，————有两个列表与子弹碰撞时使用大的，与护盾碰撞时使用小的
         self.explosion_anim = {}
         self.explosion_anim['lg'] = []
@@ -35,16 +35,39 @@ class Explosion(GameSpirte):
     def load_image(self):
         explode = []
         explode.extend([ \
-            pygame.image.load("images/images/explode/ex0.png").convert_alpha(), \
-            pygame.image.load("images/images/explode/ex1.png").convert_alpha(), \
-            pygame.image.load("images/images/explode/ex2.png").convert_alpha(), \
-            pygame.image.load("images/images/explode/ex3.png").convert_alpha(), \
-            pygame.image.load("images/images/explode/ex4.png").convert_alpha(), \
-            pygame.image.load("images/images/explode/ex5.png").convert_alpha(), \
-            pygame.image.load("images/images/explode/ex6.png").convert_alpha(), \
-            pygame.image.load("images/images/explode/ex7.png").convert_alpha(), \
-            pygame.image.load("images/images/explode/ex8.png").convert_alpha(), \
+            pygame.image.load("images/explode/ex1.png").convert_alpha(), \
+            pygame.image.load("images/explode/ex1.png").convert_alpha(), \
+            pygame.image.load("images/explode/ex2.png").convert_alpha(), \
+            pygame.image.load("images/explode/ex3.png").convert_alpha(), \
+            pygame.image.load("images/explode/ex4.png").convert_alpha(), \
+            pygame.image.load("images/explode/ex5.png").convert_alpha(), \
+            pygame.image.load("images/explode/ex6.png").convert_alpha(), \
+            pygame.image.load("images/explode/ex7.png").convert_alpha(), \
+            pygame.image.load("images/explode/ex8.png").convert_alpha(), \
             ])
+
+        """explode.extend([ \
+            pygame.image.load("images/explode/e_01.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_02.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_03.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_04.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_05.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_06.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_07.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_08.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_09.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_10.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_11.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_12.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_13.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_14.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_15.png").convert_alpha(), \
+            pygame.image.load("images/explode/e_16.png").convert_alpha(), \
+            ])
+        """
+
+
+
 
         for i in range(9):
             img = explode[i]
